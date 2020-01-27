@@ -1,0 +1,21 @@
+.container-login-sign {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/img/fondo-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+}
+
+.subcontainer-login-sign {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 75%;
+}
