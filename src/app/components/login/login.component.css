@@ -1,10 +1,21 @@
 /* Login container */
 
-.container {
-    width: 260px;
-    height: 260px;
+.containerLogin {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/img/fondo-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcontainer-login {
+    width: 80%;
+    height: 40%;
     border-radius: 5px;
-    margin-top: 1.5em;
     background: rgba(3, 3, 3, 0.25);
     box-shadow: 1px 1px 50px #000;
 }

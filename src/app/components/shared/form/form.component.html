@@ -1,7 +1,11 @@
 <article>
     <div class="containerBtn">
-        <input class="btn btn-login" type="submit" value="Iniciar sesion">
-        <input class="btn btn-create" type="submit" value="Registrar cuenta">
+        <button [routerLink]="['/login']" class="btn btn-login"> 
+            Iniciar sesion
+        </button>
+        <button [routerLink]="['/signin']" class="btn btn-create">
+            Registrar cuenta
+        </button>
     </div>
 
 </article>
