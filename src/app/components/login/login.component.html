@@ -4,7 +4,7 @@
             <app-container-avatar></app-container-avatar>
 
         </div>
-        <form [formGroup]="lognInForm" (ngSubmit)="login(lognInForm.value)" class="subcontainer-login">
+        <form #myForm="ngForm" [formGroup]="lognInForm" (ngSubmit)="login(lognInForm.value)" class="subcontainer-login">
             <input type="email" name="email" placeholder="E-mail" formControlName="email">
             <input type="password" name="pass" placeholder="Password" formControlName="password">
             <button type="submit" class="btn-sign">Log in</button>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { NaturalizateService } from '../../services/naturalizate.service';
 import { UserI } from '../../models/user.interface';
@@ -9,6 +10,9 @@ import { UserI } from '../../models/user.interface';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  @ViewChild('myForm', {static: false}) formValues; 
+
 //json donde guardo la informacion que viene en el formulario
 lognInForm = new FormGroup({
   email: new FormControl('', Validators.required),
@@ -24,5 +28,6 @@ lognInForm = new FormGroup({
 
   login(form:UserI){
     this.servicesnaturalizate.loginByEmail(form);
+    this.formValues.resetForm();
     }
 }
