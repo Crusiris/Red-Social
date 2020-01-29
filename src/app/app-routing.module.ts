@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: "signin", component:SigninComponent},
   { path: "login", component:LoginComponent},
   { path: "start", component:StartComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+{ path: '**', component: StartWelcomeComponent },
   
 ];
 
