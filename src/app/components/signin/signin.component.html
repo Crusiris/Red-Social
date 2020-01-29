@@ -1,0 +1,22 @@
+<section class="containerLogin">
+    <article class="container-avatar-form">
+        <div class="container-avatar">
+            <app-container-avatar></app-container-avatar>
+
+        </div>
+        <form #myForm="ngForm" [formGroup]="signInForm" (ngSubmit)="signIn(signInForm.value)" class="subcontainer-login">
+            <input type="text" placeholder="E-mail" formControlName="email">
+
+            <input type="password" placeholder="Password" formControlName="password">
+            <button type="submit" class="btn-sign">Sign In</button> <br>
+
+
+            <div id="remember-container">
+
+                <div> <button [routerLink]="['/home']" class="btn-back"><i class="fas fa-arrow-left ico"></i></button></div>
+
+            </div>
+
+        </form>
+    </article>
+</section>

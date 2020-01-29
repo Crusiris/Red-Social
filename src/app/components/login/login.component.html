@@ -1,12 +1,22 @@
-<div class="container">
-    <form>
-        <input type="email" name="email" placeholder="E-mail">
-        <input type="password" name="pass" placeholder="Password">
-        <a href="#">Log in</a>
-        <div id="remember-container">
-            <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked" />
-            <span id="remember">Remember me</span>
+<section class="containerLogin">
+    <article class="container-avatar-form">
+        <div class="container-avatar">
+            <app-container-avatar></app-container-avatar>
 
         </div>
-    </form>
-</div>
+        <form #myForm="ngForm" [formGroup]="lognInForm" (ngSubmit)="login(lognInForm.value)" class="subcontainer-login">
+            <input type="email" name="email" placeholder="E-mail" formControlName="email">
+            <input type="password" name="pass" placeholder="Password" formControlName="password">
+            <button type="submit" class="btn-sign">Log in</button>
+
+            <div id="remember-container">
+                <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked" />
+                <span id="remember">Remember me</span><br>
+                <div> <button [routerLink]="['/home']" class="btn-back"><i class="fas fa-arrow-left ico"></i></button></div>
+
+            </div>
+
+        </form>
+
+    </article>
+</section>
