@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 import { Observable, from } from 'rxjs';
 import { AngularFirestore,  AngularFirestoreCollection } from '@angular/fire/firestore';
 import {AngularFireAuth} from '@angular/fire/auth'
@@ -23,16 +24,13 @@ constructor(public afAuth: AngularFireAuth) {
 
 //Metodo para iniciar sesion con email y password
 loginByEmail(user:UserI){
-  return new Promise((resolve, reject)=>{
-//metodo destructori para descomponer el objeto en propiedades
+  //metodo destructori para descomponer el objeto en propiedades
       const { email, password } = user;
-      this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then(res => resolve(res),
-      err=>reject(err))
-  })
-
+     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
+ 
 }
-
+      
+ 
 //Metodo para logear usuario con google
 
 loginGoogleUser() {
